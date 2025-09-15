@@ -71,13 +71,13 @@ export default function Hero() {
                               <img
                                    src="/coming.png"
                                    alt="coming"
-                                   className="w-auto "
+                                   className="w-auto h-36 xs:h-40 sm:h-50 md:h-64 lg:h-max"
                               />
 
                               <img
                                    src="/soon.png"
                                    alt="soon"
-                                   className="w-auto "
+                                   className="w-auto h-36 xs:h-40 sm:h-50 md:h-64 lg:h-max"
                               />
                          </div>
                     </div>
