@@ -1,0 +1,52 @@
+.container {
+     width: 100%;
+     display: grid;
+     place-items: center;
+     padding: 1.2rem 0;
+}
+
+.title {
+     font-size: clamp(1.3rem, 2.3vw, 1.5rem);
+}
+
+.timeWrapper {
+     width: 100%;
+     max-width: 800px; /* limitezi pe desktop */
+     margin: auto;
+     display: flex;
+     justify-content: center;
+     flex-wrap: wrap; /* pe ecrane mici trec pe două rânduri */
+     gap: 0.5rem;
+}
+
+.timeContainer {
+     text-align: center;
+}
+
+.valueContainer {
+     display: flex;
+     align-items: center;
+     font-size: clamp(1.3rem, 2.5vw, 2.1rem);
+}
+
+.value {
+     margin: 5px;
+     padding: 2rem;
+     background: linear-gradient(
+          to bottom,
+          #7a0bc0 0%,
+          #fa58b6 50%,
+          #7a0bc0 100%
+     );
+     width: 2.1rem;
+     display: flex;
+     justify-content: center;
+     font-weight: 530;
+     border-radius: 10px;
+}
+
+.unit {
+     text-transform: capitalize;
+     font-size: clamp(0.8rem, 2vw, 1rem);
+     margin-top: 5px;
+}

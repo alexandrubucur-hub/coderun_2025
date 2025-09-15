@@ -1,16 +1,14 @@
 "use client";
-
+import CountdownTimer from "../components/CountdownTimer";
+import styles from "./page.module.css";
+import { isDateInPast } from "@/helper";
 import { useState } from "react";
 import { Dialog, DialogPanel } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
-const navigation = [
-     { name: "Product", href: "#" },
-     { name: "Features", href: "#" },
-     { name: "Marketplace", href: "#" },
-     { name: "Company", href: "#" },
-];
 import Link from "next/link";
+
+const countdownDate = new Date("2025-10-20T23:18:07");
 
 export default function Hero() {
      const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -67,17 +65,24 @@ export default function Hero() {
                               </h1>
                          </div>
 
-                         <div className="flex justify-between items-center max-w-8xl mx-auto px-8 -mt-8 sm:-mt-12 md:-mt-16 lg:-mt-20">
+                         <div className="flex flex-col items-center gap-4 sm:flex-col md:flex-col lg:flex-row justify-between max-w-8xl mx-auto px-8">
                               <img
                                    src="/coming.png"
                                    alt="coming"
-                                   className="w-auto h-36 xs:h-40 sm:h-50 md:h-64 lg:h-max"
+                                   className="w-auto"
                               />
+
+                              <div className="order-2 lg:order-none">
+                                   <CountdownTimer
+                                        deadline={countdownDate}
+                                        title={"Trebe sa scriu ceva?"}
+                                   />
+                              </div>
 
                               <img
                                    src="/soon.png"
                                    alt="soon"
-                                   className="w-auto h-36 xs:h-40 sm:h-50 md:h-64 lg:h-max"
+                                   className="w-auto"
                               />
                          </div>
                     </div>
