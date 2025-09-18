@@ -24,9 +24,9 @@ export default function Hero() {
                                    rel="noopener noreferrer"
                               >
                                    <img
-                                        src="/best.png"
+                                        src="/BESTCJ_signature_white.png"
                                         alt="bestcj Logo"
-                                        className="w-52"
+                                        className="h-40 object-contain" // înălțime fixă
                                    />
                               </a>
                               <a
@@ -37,11 +37,12 @@ export default function Hero() {
                                    <img
                                         src="/ut.png"
                                         alt="UTCN Logo"
-                                        className="w-48"
+                                        className="h-36 object-contain" // aceeași înălțime
                                    />
                               </a>
                          </div>
                     </div>
+
                     <div
                          aria-hidden="true"
                          className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
@@ -65,24 +66,29 @@ export default function Hero() {
                               </h1>
                          </div>
 
-                         <div className="flex flex-col items-center gap-4 sm:flex-col md:flex-col lg:flex-row justify-between max-w-8xl mx-auto px-8">
+                         <div className="flex flex-wrap items-center justify-center gap-8 max-w-8xl mx-auto px-8 pb-8 lg:flex-nowrap lg:justify-between">
+                              {/* Coming */}
+                              {/* MODIFICARE: w-2/5 pe mobil, lg:w-auto pe desktop */}
                               <img
                                    src="/coming.png"
                                    alt="coming"
-                                   className="w-auto"
+                                   className="w-5/12 order-1 lg:w-auto lg:order-1"
                               />
 
-                              <div className="order-2 lg:order-none">
+                              {/* Countdown */}
+                              <div className="w-full order-3 lg:w-auto lg:order-2">
                                    <CountdownTimer
                                         deadline={countdownDate}
-                                        title={"Trebe sa scriu ceva?"}
+                                        title="Start in:"
                                    />
                               </div>
 
+                              {/* Soon */}
+                              {/* MODIFICARE: w-2/5 pe mobil, lg:w-auto pe desktop */}
                               <img
                                    src="/soon.png"
                                    alt="soon"
-                                   className="w-auto"
+                                   className="w-5/12 order-2 lg:w-auto lg:order-3"
                               />
                          </div>
                     </div>

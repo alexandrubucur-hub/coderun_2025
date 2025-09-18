@@ -1,48 +1,63 @@
+@font-face {
+     font-family: "MyFont";
+     src: url("/fonts/Road_Rage.otf") format("opentype");
+     font-weight: 400;
+     font-style: normal;
+     font-display: swap;
+}
+
 .container {
      width: 100%;
-     display: grid;
-     place-items: center;
+     display: flex;
+     flex-direction: column; // stivuiește titlu + timer
+     align-items: center; // centrează tot pe orizontală
      padding: 1.2rem 0;
+     font-family: "MyFont", sans-serif;
 }
 
 .title {
-     font-size: clamp(1.3rem, 2.3vw, 1.5rem);
+     font-size: clamp(1rem, 4vw, 1.5rem); // font responsive
+     text-align: center; // centrăm textul pe toate rândurile
+     margin-bottom: 1rem;
 }
 
 .timeWrapper {
      width: 100%;
-     max-width: 800px; /* limitezi pe desktop */
+     max-width: 800px;
      margin: auto;
      display: flex;
+     flex-wrap: wrap; // permite să treacă pe rânduri pe mobil
      justify-content: center;
-     flex-wrap: wrap; /* pe ecrane mici trec pe două rânduri */
      gap: 0.5rem;
 }
 
 .timeContainer {
      text-align: center;
+     flex: 1 1 45%; // fiecare ocupa ~45% pe mobil
+     min-width: 120px;
+
+     @media (min-width: 768px) {
+          // tablet / desktop
+          flex: 1 1 auto; // toate pe un singur rând
+          min-width: unset;
+     }
 }
 
 .valueContainer {
      display: flex;
+     justify-content: center;
      align-items: center;
-     font-size: clamp(1.3rem, 2.5vw, 2.1rem);
+     font-size: clamp(3.5rem, 6vw, 7rem); // mai mare
+
+     @media (max-width: 640px) {
+          // ecrane foarte mici
+          flex-wrap: wrap; // permite două cifre pe rând dacă nu încape
+          justify-content: center;
+     }
 }
 
 .value {
-     margin: 5px;
-     padding: 2rem;
-     background: linear-gradient(
-          to bottom,
-          #7a0bc0 0%,
-          #fa58b6 50%,
-          #7a0bc0 100%
-     );
-     width: 2.1rem;
-     display: flex;
-     justify-content: center;
-     font-weight: 530;
-     border-radius: 10px;
+     margin: 0 2px;
 }
 
 .unit {
