@@ -17,11 +17,7 @@ export default function Hero() {
           <div className="w-full">
                <div className="relative isolate px-6 lg:px-8">
                     <div className="pt-20">
-                         <div
-                              className="flex items-center max-w-8xl mx-auto 
-                  px-8 justify-center gap-16 
-                  md:justify-between md:gap-0"
-                         >
+                         <div className="flex justify-between items-center max-w-8xl mx-auto px-8">
                               <a
                                    href="https://bestcj.ro/"
                                    target="_blank"
