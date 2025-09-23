@@ -17,7 +17,11 @@ export default function Hero() {
           <div className="w-full">
                <div className="relative isolate px-6 lg:px-8">
                     <div className="pt-20">
-                         <div className="flex justify-between items-center max-w-8xl mx-auto px-8">
+                         <div
+                              className="flex items-center max-w-8xl mx-auto 
+                  px-8 justify-center gap-16 
+                  md:justify-between md:gap-0"
+                         >
                               <a
                                    href="https://bestcj.ro/"
                                    target="_blank"
@@ -26,7 +30,7 @@ export default function Hero() {
                                    <img
                                         src="/BESTCJ_signature_white.png"
                                         alt="bestcj Logo"
-                                        className="h-40 object-contain" // înălțime fixă
+                                        className="h-40 object-contain"
                                    />
                               </a>
                               <a
@@ -37,7 +41,7 @@ export default function Hero() {
                                    <img
                                         src="/ut.png"
                                         alt="UTCN Logo"
-                                        className="h-36 object-contain" // aceeași înălțime
+                                        className="h-36 object-contain"
                                    />
                               </a>
                          </div>
