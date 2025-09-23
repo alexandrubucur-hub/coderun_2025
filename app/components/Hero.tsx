@@ -17,16 +17,17 @@ export default function Hero() {
           <div className="w-full">
                <div className="relative isolate px-6 lg:px-8">
                     <div className="pt-20">
-                         <div className="flex justify-between items-center max-w-8xl mx-auto px-8">
+                         <div className="flex items-center justify-between px-0 sm:px-6 lg:px-8">
                               <a
                                    href="https://bestcj.ro/"
                                    target="_blank"
                                    rel="noopener noreferrer"
                               >
                                    <img
-                                        src="/BESTCJ_signature_white.png"
+                                        src="/best.png"
                                         alt="bestcj Logo"
-                                        className="h-40 object-contain"
+                                        // Dimensiuni responsive: mic pe mobil, mai mare pe desktop
+                                        className="h-24 sm:h-40 w-auto object-contain"
                                    />
                               </a>
                               <a
@@ -37,7 +38,8 @@ export default function Hero() {
                                    <img
                                         src="/ut.png"
                                         alt="UTCN Logo"
-                                        className="h-36 object-contain"
+                                        // Dimensiuni responsive: mic pe mobil, mai mare pe desktop
+                                        className="h-20 sm:h-36 w-auto object-contain"
                                    />
                               </a>
                          </div>
