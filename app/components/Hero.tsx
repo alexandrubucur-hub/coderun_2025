@@ -8,7 +8,7 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
 import Link from "next/link";
 
-const countdownDate = new Date("2025-10-20T23:18:07");
+const countdownDate = new Date("2025-10-13T15:00:00");
 
 export default function Hero() {
      const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
